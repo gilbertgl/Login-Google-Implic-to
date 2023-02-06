@@ -1,0 +1,15 @@
+<div class="container">
+  <button onclick="handleDriveAuthClick()">
+    Authorize
+  </button>
+  <input
+    type="file"
+    name="file"
+    id="chooseFile"
+    (change)="OnChangeFileSelected($event.target)"
+  />
+  <div *ngIf="token && file">
+    <button id="uploadBtn" (click)="uploadFile()">Upload File</button>
+  </div>
+</div>
+<script src="../../../assets/javascript/app.js"></script>
